@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
   import { urlParse } from 'common/js/util';
   import header from 'components/header/header.vue';
 
@@ -37,7 +37,7 @@
       };
     },
     created() {
-      const url = debug ? '/api/seller' : 'http://ustbhuangyi.com/sell/api/seller';
+      const url = debug ? '/api/seller' : 'http://207.148.79.204/sell/api/seller';
       this.$http.get(url + '?id=' + this.seller.id).then((response) => {
         response = response.body;
         if (response.errno === ERR_OK) {

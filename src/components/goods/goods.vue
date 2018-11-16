@@ -46,7 +46,7 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
   import BScroll from 'better-scroll';
   import shopcart from 'components/shopcart/shopcart';
   import cartcontrol from 'components/cartcontrol/cartcontrol';
@@ -96,7 +96,7 @@
     created() {
       this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
 
-      const url = debug ? '/api/goods' : 'http://ustbhuangyi.com/sell/api/goods';
+      const url = debug ? '/api/goods' : 'http://207.148.79.204/sell/api/goods';
       this.$http.get(url).then((response) => {
         response = response.body;
         if (response.errno === ERR_OK) {

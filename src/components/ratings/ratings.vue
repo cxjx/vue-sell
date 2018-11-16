@@ -55,7 +55,7 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
   import BScroll from 'better-scroll';
   import {formatDate} from 'common/js/date';
   import star from 'components/star/star';
@@ -80,7 +80,7 @@
       };
     },
     created() {
-      const url = debug ? '/api/ratings' : 'http://ustbhuangyi.com/sell/api/ratings';
+      const url = debug ? '/api/ratings' : 'http://207.148.79.204/sell/api/ratings';
       this.$http.get(url).then((response) => {
         response = response.body;
         if (response.errno === ERR_OK) {
