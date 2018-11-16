@@ -22,7 +22,7 @@ if [ $RETVAL = 0 ]; then
 
   # copy
   cp -r dist $WEB_PATH
-  chmod -R ${LINUX_USER}:turing $WEB_PATH
+  chown -R ${LINUX_USER}:turing $WEB_PATH
 
   # nginx reload
   #$LINUX_HOME/nginx/sbin/nginx -s reload
