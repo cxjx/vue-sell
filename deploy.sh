@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+#test
+
 # 用户
 LINUX_USER="chenx"
 # 用户家目录
